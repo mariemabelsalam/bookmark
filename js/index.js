@@ -165,9 +165,10 @@ function update() {
         bookmarkName: siteNameInput.value,
         websitURL: siteUrlInput.value,
     }
-    allBookmark.splice(index , 1 , bookmark)
-    localStorage.setItem("bookmark" , JSON.stringify(allBookmark))
+    allBookmark.splice(index, 1, bookmark)
+    localStorage.setItem("bookmark", JSON.stringify(allBookmark))
     displayData()
     submitInput.classList.remove('d-none');
     upadteInput.classList.add('d-none');
+    clear()
 }
