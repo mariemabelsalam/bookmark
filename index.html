@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Mark</title>
+    <link rel="shortcut icon" href="images/download-_2_.ico" type="image/x-icon">
+    <meta name="description" content="bookmark management using crud techniques in js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h1 class="text-center mt-5">Bookmarker</h1>
+            </div>
+            <div class="content text-center py-3">
+                <i class="fa-solid fa-bookmark fs-3  text-success"></i>
+                <h2 class="d-inline">Bookmark your favorite sites </h2>
+                <i class="fa-solid fa-bookmark fs-3 text-olive-green"></i>
+            </div>
+            <div class="mt-4 design py-2">
+                <div class="mb-4">
+                    <label for="bookmarkName">
+                        <ul class="fa-ul  my-1">
+                            <li><span class="fa-li"><i class="fa-solid fa-book-bookmark me-2"></i></span><span
+                                    class="fw-bold">Site Name</span></li>
+                        </ul>
+                    </label>
+                    <input type="text" class="form-control" id="bookmarkName" placeholder="Bookmark Name"
+                        name="bookmark" oninput="validation(this)">
+                </div>
+                <div>
+                    <label for="websiteUrl">
+                        <ul class="fa-ul my-1">
+                            <li><span class="fa-li"><i class="fa-solid fa-link me-2"></i></span><span
+                                    class="fw-bold">Site URL</span></li>
+                        </ul>
+                    </label>
+                    <input type="url" class="form-control" id="websiteUrl" placeholder="Website URL" name="websiteUrl"
+                        oninput="validation(this)">
+                </div>
+                <div class=" text-center my-3">
+                    <button class="btn text-white red-ochre px-5 py-2" id="Submitbtn" onclick="addBookmark()">Submit</button>
+                    <button class="btn text-white red-ochre px-5 py-2 d-none" id="updatebtn" onclick="update()">ubdate</button>
+                </div>
+
+                <div class="w-75 mt-2 m-auto">
+                    <label for="searchItem"></label>
+                    <input type="search" class="form-control" id="searchItem" placeholder="search with name" oninput="search()">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <table class="table mt-3 text-center">
+                <thead>
+                    <tr>
+                        <th>index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="items">
+
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
